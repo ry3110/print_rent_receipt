@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="DETAILS">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Contact</title>
+    <link rel="stylesheet" href="index.css" media="screen">
+<link rel="stylesheet" href="Contact.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="index.js" defer=""></script>
+    <meta name="generator" content="Nicepage 3.21.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+
+
+
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Contact">
+    <meta property="og:type" content="website">
+  </head>
+  <body data-home-page="Contact.html" data-home-page-title="Contact" class="u-body"><header class="u-clearfix u-header u-header" id="sec-a5d4"><div class="u-align-left u-clearfix u-sheet u-sheet-1">
+        <div  class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-left u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <h2 class="u-text u-text-default u-text-1">DETAILS</h2>
+                </div>
+              </div>
+              <div id="pdf" class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <div class="u-container-style u-expanded-width u-group u-palette-1-light-2 u-shape-rectangle u-group-1">
+                    <div class="u-container-layout u-container-layout-3">
+                      <p class="u-text u-text-default u-text-2">RENT RECEIPT<span style="font-weight: 700;"></span>
+                      </p>
+                      
+                      <p class="u-text u-text-default u-text-4" id="cdate">Date: 01/02/2020</p>
+                      <h3 class="u-text u-text-5"> Received sum of INR <span style="font-weight: 700;" id="trent">Rs.15000</span> from <span style="font-weight: 700;" id="receipt_name">Alice</span> towards the rent of property located at  <span style="font-weight: 700;" id="ad"> Gandipuram, Coimbatore - 641012 </span> for the period from <span style="font-weight: 700;" id="fdate">01/01/2020</span> to <span style="font-weight: 700;" id="tdate">01/31/2020 </span>
+                      </h3>
+                      <p class="u-text u-text-6">
+                        <span style="font-weight: 700;" id="land_lord">Bob</span> (Landlord) 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-form u-form-1">
+          <form action="/action_page.php">
+            <label for="fname">Name of person</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <br><br>
+            <label for="start">From:</label>
+
+            <input type="text" id="from" name="start" min="2018-03" placeholder="dd/mm/yyyy">
+            <br><br>
+            <label for="start" style="margin-left: ">To:</label>
+
+            <input type="text" id="to" name="start" min="2018-03" placeholder="dd/mm/yyyy">
+            <br>
+            <br>
+            <label for="rent">Rent per month:</label>
+            <input type="number" id="rent" name="rent" placeholder="Rent per month">
+            <br>
+            <br>
+            <label for="fname">Address of User:</label>
+            <input type="text" id="user_address" name="firstname" placeholder="Address of User">
+            <br>
+            <br>
+            <label for="fname">Name of landlord:</label>
+            <input type="text" id="landlord_name" name="firstname" placeholder="Name of landlord">
+
+            <br><br>
+
+
+
+          <button onclick="change('pdf','Title')" >Submit</button>
+          </form>
+        </div>
+      </div></header>
+    <section class="u-align-center u-clearfix u-section-1" id="sec-2ef9">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1"></div>
+    </section>
+    <section class="u-align-center u-clearfix u-section-2" id="sec-1554">
+      <div class="u-clearfix u-sheet u-sheet-1"></div>
+    </section>
+
+
+<script type="text/javascript">
+document.getElementById("fname").addEventListener("keyup", function() {
+    var name_of_person = document.getElementById("fname").value;
+    document.getElementById("receipt_name").innerHTML = name_of_person;
+
+  })
+  document.getElementById("user_address").addEventListener("keyup", function() {
+      var given_address = document.getElementById("user_address").value;
+      document.getElementById("ad").innerHTML = given_address;
+
+    })
+    document.getElementById("landlord_name").addEventListener("keyup", function() {
+        var given_lord = document.getElementById("landlord_name").value;
+        document.getElementById("land_lord").innerHTML = given_lord;
+
+      })
+      document.getElementById("from").addEventListener("keyup", function() {
+        var from_date = document.getElementById("from").value;
+        document.getElementById("fdate").innerHTML = from_date;
+
+      })
+      document.getElementById("to").addEventListener("keyup", function() {
+        var to_date = document.getElementById("to").value;
+        document.getElementById("tdate").innerHTML = to_date;
+
+      })
+  function change(divId,
+  title) {
+    var input_from = document.getElementById("from").value;
+    var input_to =document.getElementById("to").value;
+    var per_month_rent=document.getElementById("rent").value;
+    var d1 = input_from;
+    var datearray = d1.split("/");
+    var newdate1 = datearray[1] + '/' + datearray[0] + '/' + datearray[2];
+    var d2 = input_to;
+    var datearray = d2.split("/");
+    var newdate2 = datearray[1] + '/' + datearray[0] + '/' + datearray[2];
+    
+    var date1 = new Date(newdate1);
+
+    var date2 = new Date(newdate2);
+    
+
+    // To calculate the time difference of two dates
+    var Difference_In_Time = date2.getTime() - date1.getTime();
+
+    // To calculate the no. of days between two dates
+    var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+    var month_no= ~~(Difference_In_Days/30);
+    var modulo=Difference_In_Days%30;
+    if(modulo>15)
+    {
+      month_no=month_no+1;
+    }
+    var total_rent=month_no*per_month_rent;
+    
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+    today = dd + '/' + mm + '/' + yyyy;
+
+    document.getElementById("cdate").innerHTML =today;
+
+  document.getElementById("trent").innerHTML =total_rent;
+
+
+
+
+  let mywindow = window.open('', 'PRINT', 'height=650,width=900,top=100,left=150');
+
+  //mywindow.document.write(`<html><head><title>${title}</title>`);
+  mywindow.document.write('</head><body >');
+  mywindow.document.write(document.getElementById(divId).innerHTML);
+  mywindow.document.write('</body></html>');
+
+  mywindow.document.close(); // necessary for IE >= 10
+  mywindow.focus(); // necessary for IE >= 10*/
+
+  mywindow.print();
+  mywindow.close();
+
+  return true;
+
+
+
+
+
+}
+
+
+
+</script>
+
+  </body>
+</html>
